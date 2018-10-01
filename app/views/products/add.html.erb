@@ -1,0 +1,13 @@
+<h1>Products#add</h1>
+<p>Find me in app/views/products/add.html.erb</p>
+
+<h1>Add item to cart</h2>
+  <%= form_for @products do %>
+  <%=label_tag :product %>
+  <%=text_field_tag :product %>
+  <%=f.submit%>
+  <%end%>
+
+<%session[:cart].each do |item|%>
+<%=item%>
+<%end%>
