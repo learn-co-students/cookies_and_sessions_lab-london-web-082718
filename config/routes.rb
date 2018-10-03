@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   # root 'products#index'
   root 'products#index', as: 'products'
+# root 'products#index', as: 'products_path' # DON"T DO THIS!!! - should leave as just 'products'
+
   post '/', to: 'products#add'
 
 
