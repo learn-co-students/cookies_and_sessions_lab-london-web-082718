@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root 'products#index'
-  root 'products#index', as: 'products_path'
+  root 'products#index', as: 'products'
   post '/', to: 'products#add'
 
 

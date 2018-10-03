@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
 
   helper_method :cart
+  # creates a helper method across controllers...
+  # allows you to view cart across different views and controllers
+  # any view / controllers which inherits from ApplicationController
+
 
   def cart
     session[:cart] ||= []

@@ -5,17 +5,23 @@ class ProductsController < ApplicationController
   end
 
 
+  # def add
+  #   cart << params[:product]
+  #   raise
+  #   render :index
+  #
+  #   # render maintains the 'full session' - can keep the cookies
+  #   #means you have access to params[:product]
+  #   # redirects take you to another controller action
+  # end
+
   def add
-    cart << params[:product]
+    @product = params[:product]
+# Load the cart from the session, or create a new empty cart.
+# makes use of cart method in the ApplicationController
+    cart << @product
     render :index
   end
-
-#   def add
-#     @product = Product.find(params[:id])
-# # Load the cart from the session, or create a new empty cart.
-# # makes use of cart method in the ApplicationController
-#     cart << @product.id
-#   end
 
   # Load the cart from the session, or create a new empty cart.
 
