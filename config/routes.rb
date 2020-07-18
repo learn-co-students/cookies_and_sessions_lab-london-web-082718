@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  # root 'products#index'
+  root 'products#index', as: 'products'
+# root 'products#index', as: 'products_path' # DON"T DO THIS!!! - should leave as just 'products'
+
+  post '/', to: 'products#add'
+
+
+  # root 'welcome#index'	  post '/', to: 'products#add'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
